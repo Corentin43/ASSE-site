@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'AS Saint-Étienne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu">
+        <li class="logo-li">
+            <a href="index.html" id="logo-trigger">
+                <img src="images/logo-kaki.png" alt="Logo ASSE" class="logo">
+            </a>
+        </li>
+		<li class="dropdown">
+			<a href="Effectif.html">Effectif</a>
+			<ul class="submenu">
+				<li><a href="Gardiens.html">Gardiens</a></li>
+				<li><a href="Défenseurs.html">Défenseurs</a></li>
+				<li><a href="Milieux.html">Milieux</a></li>
+				<li><a href="Attaquants.html">Attaquants</a></li>
+				<li><a href="Staff.html">Coach / Staff</a></li>
+			</ul>
+		</li>
+        <li><a href="Palmarès.html">Palmarès</a></li>
+		<li class="dropdown">
+			<a>Maillots</a>
+			<ul class="submenu">
+				<li><a href="maillots-2026.html">Maillots 2026</a></li>
+				<li><a href="maillots historiques.html">Maillots historique</a></li>
+			</ul>
+		</li>
+        <li><a href="Matchs à venir.html">Matchs à venir</a></li>
+        <li><a href="Histoire.html">Histoire</a></li>
+        <li><a href="Stade.html">Stade</a></li>
+        <li><a href="Légendes.html">Légendes</a></li>
+        <li><a href="Sponsors.html">Sponsors</a></li>
+		<li><a href="Logos.html">Les Logos</a></li>
+    </ul>
+</nav>
+
+<h1 class="titre">LES DEFENSEURS</h1>
+
+<p class="intro">
+Les défenseurs incarnent la rigueur et l’engagement nécessaires pour protéger les buts de l’équipe. Qu’ils évoluent dans l’axe ou sur les côtés, ils allient puissance physique, intelligence tactique et sens de l’anticipation. 
+Leur complémentarité permet de contenir les attaques adverses tout en participant activement aux phases de relance et parfois même aux offensives.
+</p>
+
+<section id="effectif" class="palmares">
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Strahinja Stojković</h2>
+            <p>2</p>
+        </div>
+        <img src="images/2.png" alt="Strahinja Stojković" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Mickaël Nadé</h2>
+            <p>3</p>
+        </div>
+        <img src="images/3.png" alt="Mickaël Nadé" class="icone-trophee player-photo-2 popup-img">
+    </div>
+
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Maxime Bernauer</h2>
+            <p>6</p>
+        </div>
+        <img src="images/6.png" alt="Maxime Bernauer" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>João Ferreira</h2>
+            <p>13</p>
+        </div>
+        <img src="images/13.png" alt="João Ferreira" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Chico Lamba</h2>
+            <p>15</p>
+        </div>
+        <img src="images/15.png" alt="Chico Lamba" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Sohaib Naïr</h2>
+            <p>18</p>
+        </div>
+        <img src="images/18.png" alt="Sohaib Naïr" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Ebenezer Annan</h2>
+            <p>19</p>
+        </div>
+        <img src="images/19.png" alt="Ebenezer Annan" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Kévin Pedro</h2>
+            <p>23</p>
+        </div>
+        <img src="images/23.png" alt="Kévin Pedro" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Julien Le Cardinal</h2>
+            <p>26</p>
+        </div>
+        <img src="images/26.png" alt="Julien Le Cardinal" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Lassana Traoré</h2>
+            <p>34</p>
+        </div>
+        <img src="images/34.png" alt="Lassana Traoré" class="icone-trophee player-photo-2 popup-img">
+    </div>
+</section>
+
+<div id="popup" class="popup-img-full">
+    <img id="popup-content">
+</div>
+
+<script>
+    document.querySelectorAll('.popup-img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('popup-content').src = img.src;
+            document.getElementById('popup').style.display = "flex";
+        });
+    });
+
+    document.getElementById('popup').addEventListener('click', () => {
+        document.getElementById('popup').style.display = "none";
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});
+</script>
+
+</body>
+</html>

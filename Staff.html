@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'AS Saint-Étienne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu">
+        <li class="logo-li">
+            <a href="index.html" id="logo-trigger">
+                <img src="images/logo-kaki.png" alt="Logo ASSE" class="logo">
+            </a>
+        </li>
+		<li class="dropdown">
+			<a href="Effectif.html">Effectif</a>
+			<ul class="submenu">
+				<li><a href="Gardiens.html">Gardiens</a></li>
+				<li><a href="Défenseurs.html">Défenseurs</a></li>
+				<li><a href="Milieux.html">Milieux</a></li>
+				<li><a href="Attaquants.html">Attaquants</a></li>
+				<li><a href="Staff.html">Coach / Staff</a></li>
+			</ul>
+		</li>
+        <li><a href="Palmarès.html">Palmarès</a></li>
+		<li class="dropdown">
+			<a>Maillots</a>
+			<ul class="submenu">
+				<li><a href="maillots-2026.html">Maillots 2026</a></li>
+				<li><a href="maillots historiques.html">Maillots historique</a></li>
+			</ul>
+		</li>
+        <li><a href="Matchs à venir.html">Matchs à venir</a></li>
+        <li><a href="Histoire.html">Histoire</a></li>
+        <li><a href="Stade.html">Stade</a></li>
+        <li><a href="Légendes.html">Légendes</a></li>
+        <li><a href="Sponsors.html">Sponsors</a></li>
+		<li><a href="Logos.html">Les Logos</a></li>
+    </ul>
+</nav>
+
+<h1 class="titre">LE COACH ET LE STAFF TECHNIQUE</h1>
+
+<p class="intro">
+Le coach et son staff technique jouent un rôle fondamental dans la réussite de l’équipe. À travers leur expertise, leur stratégie et leur gestion du groupe, ils guident les joueurs vers la performance collective. 
+Préparateurs physiques, analystes et encadrement médical travaillent en synergie pour optimiser chaque détail et permettre à l’équipe de donner le meilleur d’elle-même tout au long de la saison.
+</p>
+
+<section id="effectif" class="palmares">
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Ian Cathro</h2>
+            <p></p>
+        </div>
+        <img src="images/01.png" alt="Ian Cathro" class="icone-trophee player-photo-2 popup-img">
+    </div>
+
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Bryant Lazaro</h2>
+            <p></p>
+        </div>
+        <img src="images/02.png" alt="Bryant Lazaro" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>David Le Moël</h2>
+            <p></p>
+        </div>
+        <img src="images/03.png" alt="David Le Moël" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Eliaquim Mangala</h2>
+            <p></p>
+        </div>
+        <img src="images/04.png" alt="Eliaquim Mangala" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Jean-François Bédénik</h2>
+            <p></p>
+        </div>
+        <img src="images/05.png" alt="Jean-François Bédénik" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Donough Holohan</h2>
+            <p></p>
+        </div>
+        <img src="images/06.png" alt="Donough Holohan" class="icone-trophee player-photo-2 popup-img">
+    </div>
+</section>
+
+<div id="popup" class="popup-img-full">
+    <img id="popup-content">
+</div>
+
+<script>
+    document.querySelectorAll('.popup-img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('popup-content').src = img.src;
+            document.getElementById('popup').style.display = "flex";
+        });
+    });
+
+    document.getElementById('popup').addEventListener('click', () => {
+        document.getElementById('popup').style.display = "none";
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});
+</script>
+
+</body>
+</html>

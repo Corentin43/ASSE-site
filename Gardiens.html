@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'AS Saint-Étienne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu">
+        <li class="logo-li">
+            <a href="index.html" id="logo-trigger">
+                <img src="images/logo-kaki.png" alt="Logo ASSE" class="logo">
+            </a>
+        </li>
+		<li class="dropdown">
+			<a href="Effectif.html">Effectif</a>
+			<ul class="submenu">
+				<li><a href="Gardiens.html">Gardiens</a></li>
+				<li><a href="Défenseurs.html">Défenseurs</a></li>
+				<li><a href="Milieux.html">Milieux</a></li>
+				<li><a href="Attaquants.html">Attaquants</a></li>
+				<li><a href="Staff.html">Coach / Staff</a></li>
+			</ul>
+		</li>
+        <li><a href="Palmarès.html">Palmarès</a></li>
+		<li class="dropdown">
+			<a>Maillots</a>
+			<ul class="submenu">
+				<li><a href="maillots-2026.html">Maillots 2026</a></li>
+				<li><a href="maillots historiques.html">Maillots historique</a></li>
+			</ul>
+		</li>
+        <li><a href="Matchs à venir.html">Matchs à venir</a></li>
+        <li><a href="Histoire.html">Histoire</a></li>
+        <li><a href="Stade.html">Stade</a></li>
+        <li><a href="Légendes.html">Légendes</a></li>
+        <li><a href="Sponsors.html">Sponsors</a></li>
+		<li><a href="Logos.html">Les Logos</a></li>
+    </ul>
+</nav>
+
+<h1 class="titre">LES GARDIENS DE BUT</h1>
+
+<p class="intro">
+Les gardiens de l’AS Saint-Étienne constituent le dernier rempart de l’équipe et jouent un rôle essentiel dans la solidité défensive. 
+Dotés de réflexes impressionnants, d’un sens du placement aiguisé et d’un mental à toute épreuve, ils sécurisent la cage stéphanoise à chaque rencontre. 
+Leur capacité à rassurer la défense et à initier les relances propres en fait des éléments clés dans la construction du jeu.</p>
+
+<section id="effectif" class="palmares">
+    <div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Gauthier Larsonneur</h2>
+            <p>Gardien n°1, Larsonneur brille par ses réflexes, son explosivité et son énergie. Déterminé, il apporte dynamisme et ambition au groupe.</p>
+        </div>
+        <img src="images/30.png" alt="Gauthier Larsonneur" class="icone-trophee player-photo-2 popup-img">
+    </div>
+
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Mamour Ndiaye</h2>
+            <p>Gardien n°2, Ndiaye apporte calme, solidité et expérience. Son sens du placement et sa fiabilité rassurent toute la défense.</p>
+        </div>
+        <img src="images/1.png" alt="Mamour Ndiaye" class="icone-trophee player-photo-2 popup-img">
+    </div>
+</section>
+
+<div id="popup" class="popup-img-full">
+    <img id="popup-content">
+</div>
+
+<script>
+    document.querySelectorAll('.popup-img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('popup-content').src = img.src;
+            document.getElementById('popup').style.display = "flex";
+        });
+    });
+
+    document.getElementById('popup').addEventListener('click', () => {
+        document.getElementById('popup').style.display = "none";
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});
+</script>
+
+</body>
+</html>

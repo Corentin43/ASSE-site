@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'AS Saint-Étienne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu">
+        <li class="logo-li">
+            <a href="index.html" id="logo-trigger">
+                <img src="images/logo-kaki.png" alt="Logo ASSE" class="logo">
+            </a>
+        </li>
+		<li class="dropdown">
+			<a href="Effectif.html">Effectif</a>
+			<ul class="submenu">
+				<li><a href="Gardiens.html">Gardiens</a></li>
+				<li><a href="Défenseurs.html">Défenseurs</a></li>
+				<li><a href="Milieux.html">Milieux</a></li>
+				<li><a href="Attaquants.html">Attaquants</a></li>
+				<li><a href="Staff.html">Coach / Staff</a></li>
+			</ul>
+		</li>
+        <li><a href="Palmarès.html">Palmarès</a></li>
+		<li class="dropdown">
+			<a>Maillots</a>
+			<ul class="submenu">
+				<li><a href="maillots-2026.html">Maillots 2026</a></li>
+				<li><a href="maillots historiques.html">Maillots historique</a></li>
+			</ul>
+		</li>
+        <li><a href="Matchs à venir.html">Matchs à venir</a></li>
+        <li><a href="Histoire.html">Histoire</a></li>
+        <li><a href="Stade.html">Stade</a></li>
+        <li><a href="Légendes.html">Légendes</a></li>
+        <li><a href="Sponsors.html">Sponsors</a></li>
+		<li><a href="Logos.html">Les Logos</a></li>
+    </ul>
+</nav>
+
+<h1 class="titre">LES MILLIEUX DE TERRAINS</h1>
+
+<p class="intro">
+Véritable cœur du jeu, les milieux de terrain assurent le lien entre la défense et l’attaque. Grâce à leur vision, leur technique et leur endurance, ils dictent le rythme des matchs et orientent les actions. 
+Qu’ils soient récupérateurs, créateurs ou polyvalents, ils apportent équilibre et créativité à l’équipe tout au long de la saison.
+</p>
+
+<section id="effectif" class="palmares">
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Mahmoud Jaber</h2>
+            <p>5</p>
+        </div>
+        <img src="images/5.png" alt="Mahmoud Jaber" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Jakob Breum</h2>
+            <p>10</p>
+        </div>
+        <img src="images/10.png" alt="Jakob Breum" class="icone-trophee player-photo-2 popup-img">
+    </div>
+
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Áron Csongvai</h2>
+            <p>14</p>
+        </div>
+        <img src="images/14.png" alt="Áron Csongvai" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Paul Eymard</h2>
+            <p>21</p>
+        </div>
+        <img src="images/21.png" alt="Paul Eymard" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Luan Gadegbeku</h2>
+            <p>27</p>
+        </div>
+        <img src="images/27.png" alt="Luan Gadegbeku" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Igor Miladinovic</h2>
+            <p>28</p>
+        </div>
+        <img src="images/28.png" alt="Igor Miladinovic" class="icone-trophee player-photo-2 popup-img">
+    </div>
+	
+	<div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Aïmen Moueffek</h2>
+            <p>29</p>
+        </div>
+        <img src="images/29.png" alt="Aïmen Moueffek" class="icone-trophee player-photo-2 popup-img">
+    </div>
+</section>
+
+<div id="popup" class="popup-img-full">
+    <img id="popup-content">
+</div>
+
+<script>
+    document.querySelectorAll('.popup-img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('popup-content').src = img.src;
+            document.getElementById('popup').style.display = "flex";
+        });
+    });
+
+    document.getElementById('popup').addEventListener('click', () => {
+        document.getElementById('popup').style.display = "none";
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'AS Saint-Étienne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu">
+        <li class="logo-li">
+            <a href="index.html" id="logo-trigger">
+                <img src="images/logo-kaki.png" alt="Logo ASSE" class="logo">
+            </a>
+        </li>
+		<li class="dropdown">
+			<a href="Effectif.html">Effectif</a>
+			<ul class="submenu">
+				<li><a href="Gardiens.html">Gardiens</a></li>
+				<li><a href="Défenseurs.html">Défenseurs</a></li>
+				<li><a href="Milieux.html">Milieux</a></li>
+				<li><a href="Attaquants.html">Attaquants</a></li>
+				<li><a href="Staff.html">Coach / Staff</a></li>
+			</ul>
+		</li>
+        <li><a href="Palmarès.html">Palmarès</a></li>
+		<li class="dropdown">
+			<a>Maillots</a>
+			<ul class="submenu">
+				<li><a href="maillots-2026.html">Maillots 2026</a></li>
+				<li><a href="maillots historiques.html">Maillots historique</a></li>
+			</ul>
+		</li>
+        <li><a href="Matchs à venir.html">Matchs à venir</a></li>
+        <li><a href="Histoire.html">Histoire</a></li>
+        <li><a href="Stade.html">Stade</a></li>
+        <li><a href="Légendes.html">Légendes</a></li>
+        <li><a href="Battiston.html">Patrick Battiston</a></li>
+        <li><a href="Sponsors.html">Sponsors</a></li>
+		<li><a href="Logos.html">Les Logos</a></li>
+    </ul>
+</nav>
+
+<h1 class="titre">Patrick Battiston</h1>
+<p class="intro">
+Patrick Battiston est une légende de l’AS Saint-Étienne et du football français. Défenseur emblématique des Verts dans les années 70 et 80, il a marqué l’histoire du club par sa solidité, son engagement et ses performances internationales.
+</p>
+
+<section id="battiston">
+
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Portrait</h2>
+            <p>
+                Né le 12 mars 1957 à Amnéville, Patrick Battiston est connu pour son élégance sur le terrain, sa polyvalence et sa détermination.  
+                Avec l’ASSE, il remporte plusieurs titres de Championnat de France et participe à de grandes compétitions européennes.
+            </p>
+        </div>
+        <img src="images/portrait Battiston.jpg" 
+             alt="Portrait Patrick Battiston" 
+             class="icone-trophee player-photo battiston-portrait">
+    </div>
+
+    <div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Carrière à l'ASSE</h2>
+            <p>
+                Patrick Battiston joue à l’ASSE de 1975 à 1983, remportant 3 titres de Championnat de France et 3 Coupes de France.  
+                Défenseur central robuste mais élégant, il reste dans les mémoires pour sa capacité à relancer le jeu proprement et son esprit d’équipe exemplaire.
+            </p>
+        </div>
+        <img src="images/battiston_2.jpg" 
+             alt="Battiston ASSE" 
+             class="icone-trophee player-photo">
+    </div>
+
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Équipe de France</h2>
+            <p>
+                Battiston compte 56 sélections avec l’équipe nationale française et participe aux Coupes du Monde 1978 et 1982.  
+                Il reste tristement célèbre pour le choc avec le gardien allemand Harald Schumacher en 1982, qui a marqué les mémoires du football mondial.
+            </p>
+        </div>
+        <img src="images/choc battiston.jpg" 
+             alt="Battiston Équipe de France" 
+             class="icone-trophee player-photo">
+    </div>
+
+    <div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Anecdotes et légende</h2>
+            <p>
+                Au-delà de sa carrière, Patrick Battiston est resté une figure emblématique pour les supporters de l’ASSE.  
+                Reconnu pour sa gentillesse et sa loyauté, il est souvent invité à des événements du club et participe à la promotion du football français auprès des jeunes.
+            </p>
+        </div>
+        <img src="images/battistonmnt.jpg" 
+             alt="Battiston légende ASSE" 
+             class="icone-trophee player-photo">
+    </div>
+
+</section>
+
+<div id="popup" class="popup-img-full">
+    <img id="popup-content">
+</div>
+
+<script>
+    const popupImages = document.querySelectorAll('.icone-trophee, .player-photo, .player-photo-2, .geoffroy, .battiston-portrait');
+    const popup = document.getElementById('popup');
+    const popupContent = document.getElementById('popup-content');
+
+    popupImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            popupContent.src = img.src;
+            popup.style.display = 'flex';
+        });
+    });
+
+    popup.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});
+</script>
+
+</body>
+</html>

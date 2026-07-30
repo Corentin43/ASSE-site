@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'AS Saint-Étienne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu">
+        <li class="logo-li">
+            <a href="index.html" id="logo-trigger">
+                <img src="images/logo-kaki.png" alt="Logo ASSE" class="logo">
+            </a>
+        </li>
+		<li class="dropdown">
+			<a href="Effectif.html">Effectif</a>
+			<ul class="submenu">
+				<li><a href="Gardiens.html">Gardiens</a></li>
+				<li><a href="Défenseurs.html">Défenseurs</a></li>
+				<li><a href="Milieux.html">Milieux</a></li>
+				<li><a href="Attaquants.html">Attaquants</a></li>
+				<li><a href="Staff.html">Coach / Staff</a></li>
+			</ul>
+		</li>
+        <li><a href="Palmarès.html">Palmarès</a></li>
+		<li class="dropdown">
+			<a>Maillots</a>
+			<ul class="submenu">
+				<li><a href="maillots-2026.html">Maillots 2026</a></li>
+				<li><a href="maillots historiques.html">Maillots historique</a></li>
+			</ul>
+		</li>
+        <li><a href="Matchs à venir.html">Matchs à venir</a></li>
+        <li><a href="Histoire.html">Histoire</a></li>
+        <li><a href="Stade.html">Stade</a></li>
+        <li><a href="Légendes.html">Légendes</a></li>
+        <li><a href="Sponsors.html">Sponsors</a></li>
+		<li><a href="Logos.html">Les Logos</a></li>
+    </ul>
+</nav>
+
+<h1 class="titre">Histoire de l'AS Saint-Étienne</h1>
+<p class="intro">
+Découvrez les moments marquants de l’histoire de l’ASSE, de sa fondation à ses exploits légendaires, en passant par ses supporters passionnés et les anecdotes uniques du club.
+</p>
+
+<section id="histoire-asse">
+
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Fondation et Geoffroy Guichard</h2>
+            <p>
+                L’AS Saint-Étienne a été fondée en 1919. Son développement doit beaucoup à Geoffroy Guichard, 
+                fondateur de la chaîne Casino. Il a investi dans le club et permis la construction du stade 
+                historique, le Stade Geoffroy-Guichard, contribuant ainsi à asseoir la popularité du club dans la région.
+            </p>
+        </div>
+        <img src="images/Geoffroy_Guichard.jpg" 
+     alt="Geoffroy Guichard" 
+     class="icone-trophee player-photo geoffroy">
+    </div>
+
+    <div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Les poteaux carrés</h2>
+            <p>
+                Pendant de nombreuses années, l’ASSE a été célèbre pour ses poteaux carrés, 
+                un détail technique qui a marqué l’histoire du club et de ses matchs à domicile. 
+                Ce petit détail fait partie des anecdotes et souvenirs des supporters de toutes générations.</br>
+				<== Cliquez ici
+            </p>
+        </div>
+        <img src="images/poteaux carrés.jpg" 
+		alt="Poteaux carrés" 
+		class="icone-trophee player-photo poteaux-carres">
+    </div>
+
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Les supporters</h2>
+            <p>
+                L’ASSE est réputée pour la ferveur de ses supporters. Parmi eux, les groupes emblématiques 
+                Green Angels et Magic Fans animent le stade avec chants, tifos et animations spectaculaires. 
+                Leur passion contribue à l’ambiance légendaire du « Chaudron ».
+            </p>
+        </div>
+        <img src="images/stade+ambiamce.jpg" alt="Green Angels et Magic Fans" class="icone-trophee player-photo">
+    </div>
+
+    <div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Descente sur les Champs-Élysées</h2>
+            <p>
+                L’un des moments les plus mémorables de l’histoire de l’ASSE reste le jour où les joueurs, 
+                champions de France, sont descendus sur les Champs-Élysées à Paris dans la célèbre Mercedes 300 D verte
+                pour célébrer le titre avec leurs supporters. Une image symbolique de la ferveur stéphanoise et de la passion du club.
+            </p>
+        </div>
+        <img src="images/descente.jpg" alt="Voiture verte sur les Champs-Élysées" class="icone-trophee player-photo">
+    </div>
+	
+<div class="ligne-trophee">
+    <div class="card-text">
+        <h2>Les derbys</h2>
+        <p>
+            Les derbys contre Olympique Lyonnais sont parmi les matchs les plus attendus de la saison. 
+            L’affrontement, surnommé “le Derby Rhône-Alpes”, oppose deux clubs historiques et passionnés. 
+            Ces rencontres sont marquées par une intensité exceptionnelle sur le terrain et une ambiance électrique dans les tribunes.</br>
+			Cliquez sur l'image pour voir Le film d’un 126e Derby victorieux ! ==>
+        </p>
+    </div>
+    <img src="images/derby.jpg" 
+         alt="Derby ASSE vs Lyon" 
+         class="player-photo video-link" 
+         data-video="https://www.youtube.com/watch?v=rRD8h7NG3mk">
+</div>
+</section>
+<script>
+const videoLinks = document.querySelectorAll('.video-link');
+
+videoLinks.forEach(img => {
+    img.addEventListener('click', () => {
+        const url = img.dataset.video;
+        window.open(url, '_blank'); 
+    });
+});
+</script>
+<script>
+const poteauxImg = document.querySelector('.poteaux-carres');
+
+poteauxImg.addEventListener('click', () => {
+    poteauxImg.src = 'gif/action poteaux carrés.gif'; 
+});
+</script>
+<div id="popup" class="popup-img-full">
+    <img id="popup-content">
+</div>
+
+<script>
+    const popupImages = document.querySelectorAll('.icone-trophee:not(.poteaux-carres):not(.video-link), .player-photo:not(.poteaux-carres):not(.video-link), .player-photo-2, .geoffroy, .battiston-portrait');
+
+    const popup = document.getElementById('popup');
+    const popupContent = document.getElementById('popup-content');
+
+    popupImages.forEach(img => {
+        img.style.cursor = 'pointer'; 
+        img.addEventListener('click', () => {
+            popupContent.src = img.src;
+            popup.style.display = 'flex';
+        });
+    });
+
+    popup.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});
+</script>
+</body>
+</html>

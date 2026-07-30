@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'AS Saint-Étienne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu">
+        <li class="logo-li">
+            <a href="index.html" id="logo-trigger">
+                <img src="images/logo-kaki.png" alt="Logo ASSE" class="logo">
+            </a>
+        </li>
+		<li class="dropdown">
+			<a href="Effectif.html">Effectif</a>
+			<ul class="submenu">
+				<li><a href="Gardiens.html">Gardiens</a></li>
+				<li><a href="Défenseurs.html">Défenseurs</a></li>
+				<li><a href="Milieux.html">Milieux</a></li>
+				<li><a href="Attaquants.html">Attaquants</a></li>
+				<li><a href="Staff.html">Coach / Staff</a></li>
+			</ul>
+		</li>
+        <li><a href="Palmarès.html">Palmarès</a></li>
+		<li class="dropdown">
+			<a>Maillots</a>
+			<ul class="submenu">
+				<li><a href="maillots-2026.html">Maillots 2026</a></li>
+				<li><a href="maillots historiques.html">Maillots historique</a></li>
+			</ul>
+		</li>
+        <li><a href="Matchs à venir.html">Matchs à venir</a></li>
+        <li><a href="Histoire.html">Histoire</a></li>
+        <li><a href="Stade.html">Stade</a></li>
+        <li><a href="Légendes.html">Légendes</a></li>
+        <li><a href="Sponsors.html">Sponsors</a></li>
+		<li><a href="Logos.html">Les Logos</a></li>
+    </ul>
+</nav>
+
+<h1 class="titre">Stade Geoffroy-Guichard</h1>
+<p class="intro">Découvrez l’histoire, les modernisations et l’ambiance unique du célèbre “Chaudron”, domicile de l’AS Saint-Étienne.</p>
+
+<section id="stade">
+
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Présentation</h2>
+            <p>
+                Le Stade Geoffroy-Guichard, situé à Saint-Étienne, est le stade historique de l’AS Saint-Étienne. 
+                Inauguré le <strong>13 septembre 1931</strong>, il n’a jamais changé de nom. Surnommé <strong>“Le Chaudron”</strong>, 
+                il est réputé pour son ambiance bouillante lors des matchs et symbolise la passion des supporters.
+            </p>
+        </div>
+        <img src="images/stade-1.png" alt="Stade Geoffroy-Guichard" class="icone-trophee player-photo">
+    </div>
+
+    <div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Histoire</h2>
+            <p>
+                À l’origine, le stade a été construit sur un terrain vague. Geoffroy Guichard, fondateur de la chaîne Casino, acheta le terrain pour le céder à l’ASSE. 
+                Le stade a été inauguré en 1931 avec une tribune unique de 700 places. Dans les années 1930-1940, de nouvelles tribunes et la tribune Henri-Point furent ajoutées, portant la capacité à environ 15 000 spectateurs.
+            </p>
+        </div>
+        <img src="images/stade-2.png" alt="Tribune historique" class="icone-trophee player-photo">
+    </div>
+
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Modernisation</h2>
+            <p>
+                En 1957, la piste d’athlétisme disparaît et le stade adopte une forme rectangulaire avec plus de 30 000 places. 
+                Les années 1960-70 voient la reconstruction de tribunes, l’installation d’éclairage, la création de la "Maison verte" et l’ouverture de la boutique officielle.
+            </p>
+        </div>
+        <img src="images/stade-3.png" alt="Stade modernisé" class="icone-trophee player-photo">
+    </div>
+
+    <div class="ligne-trophee reverse">
+        <div class="card-text">
+            <h2>Compétitions majeures</h2>
+            <p>
+                Pour l’Euro 1984, le stade fut modernisé avec reconstruction des tribunes, toit sur la tribune Sud et panneau électronique. 
+                La capacité atteignit 48 274 places. Pour la Coupe du Monde 1998, toutes les places devinrent assises et les tribunes modernisées, inaugurant une capacité de 35 616 places.
+            </p>
+        </div>
+        <img src="images/stade-4.png" alt="Tribune Euro 1984" class="icone-trophee player-photo">
+    </div>
+
+    <div class="ligne-trophee">
+        <div class="card-text">
+            <h2>Le Stade aujourd'hui</h2>
+            <p>
+                Aujourd’hui, le Stade Geoffroy-Guichard reste le domicile de l’AS Saint-Étienne et conserve son surnom de “Chaudron”. 
+                Il est reconnu pour l’ambiance exceptionnelle créée par les supporters et accueille régulièrement des compétitions nationales et internationales.
+            </p>
+        </div>
+        <img src="images/stade-5.jpg" alt="Le Chaudron aujourd'hui" class="icone-trophee player-photo">
+    </div>
+
+</section>
+
+<div id="popup" class="popup-img-full">
+    <img id="popup-content">
+</div>
+
+<script>
+    const popupImages = document.querySelectorAll('.icone-trophee, .player-photo, .player-photo-2, .geoffroy, .battiston-portrait');
+    const popup = document.getElementById('popup');
+    const popupContent = document.getElementById('popup-content');
+
+    popupImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            popupContent.src = img.src;
+            popup.style.display = 'flex';
+        });
+    });
+
+    popup.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});
+</script>
+</body>
+</html>
