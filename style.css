@@ -32,7 +32,7 @@
 }
 
 body {
-    background-image: url("https://corentin43.github.io/ASSE-site/images/fond.png");
+    background-image: url("images/fond.png");
     background-size: cover;        /* prend tout l'écran */
     background-position: center;   /* centré */
     background-repeat: no-repeat;  /* pas répété */
