@@ -1278,12 +1278,3 @@ tr:hover td {
     }
 
 }
-@media (max-width: 768px) {
-
-    body {
-        background-size: 100% auto;
-        background-position: top center;
-        background-attachment: scroll;
-    }
-
-}
