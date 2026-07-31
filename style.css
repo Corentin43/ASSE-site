@@ -668,6 +668,8 @@ tr:hover td {
 
     .ligne-trophee img {
         max-width: 100%;
+		height: auto;
+   		object-fit: contain;
     }
 
     .ligne-trophee.reverse {
