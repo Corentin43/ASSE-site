@@ -1278,3 +1278,11 @@ tr:hover td {
     }
 
 }
+@media (max-width: 768px) {
+
+    body {
+        background-image: none;
+        background-color: #D9C8A6;
+    }
+
+}
