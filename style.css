@@ -654,3 +654,26 @@ tr:hover td {
 .dropdown {
     position: relative;
 }
+@media (max-width: 768px) {
+
+    .ligne-trophee {
+        flex-direction: column; /* 👈 passe en vertical */
+        text-align: center;
+    }
+
+    .card-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .ligne-trophee img {
+        max-width: 100%;
+    }
+
+    .ligne-trophee.reverse {
+        flex-direction: column; /* 👈 annule le reverse sur mobile */
+    }
+	.ligne-trophee img {
+    order: -1; /* 👈 met l’image en premier */
+	}
+}
