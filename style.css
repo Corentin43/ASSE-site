@@ -676,4 +676,12 @@ tr:hover td {
 	.ligne-trophee img {
     order: -1; /* 👈 met l’image en premier */
 	}
+	    .dropdown .submenu {
+        position: static;
+        display: none;
+    }
+
+    .dropdown:hover .submenu {
+        display: block;
+    }
 }
