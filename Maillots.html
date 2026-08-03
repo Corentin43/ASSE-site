@@ -159,6 +159,22 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('show');
     });
 });
+document.querySelectorAll(".dropdown > a").forEach(menu => {
+    menu.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        let submenu = this.nextElementSibling;
+
+        document.querySelectorAll(".submenu").forEach(s => {
+            if (s !== submenu) {
+                s.style.display = "none";
+            }
+        });
+
+        submenu.style.display = 
+            submenu.style.display === "block" ? "none" : "block";
+    });
+});
 </script>
 
 </body>
