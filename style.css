@@ -985,7 +985,7 @@ tr:hover td {
 
     left: 0;
 
-    background-color: #556B2F;
+    background-color: #D9C8A6;
 
     list-style: none;
 
@@ -1004,7 +1004,7 @@ tr:hover td {
 
 .submenu li {
 
-    border-bottom: 1px solid #D9C8A6;
+    border-bottom: 1px solid #556B2F;
 
 }
 
@@ -1015,7 +1015,7 @@ tr:hover td {
 
     padding: 10px;
 
-    color: #D9C8A6;
+    color: #556B2F;
 
     text-decoration: none;
 
@@ -1026,7 +1026,7 @@ tr:hover td {
 
 .submenu li a:hover {
 
-    background-color: #006400;
+    background-color: white;
 
 }
 
